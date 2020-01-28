@@ -21,8 +21,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.commonjs2.js",
-  "browser": "./dist/index.window.js",
+  "browser": {
+    "ws": false
+  },
+  "main": "./dist/index.window.js",
+  "browser": "./lib/web.js",
+  "module": "./dist/index.commonjs2.js",
   "scripts": {
     "webpack": "webpack --config ./webpack.config.js --progress --mode",
     "mocha": "mocha --require babel-core/register --exit $1",
@@ -45,6 +49,7 @@
     "url": "https://github.com/twilio/twilio-taskrouter.js.git"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "lodash": "^4.17.5",
     "loglevel": "^1.4.1",
     "ws": "^5.1.0",
