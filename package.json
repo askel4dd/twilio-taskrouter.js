@@ -24,9 +24,7 @@
   "browser": {
     "ws": false
   },
-  "main": "./dist/index.window.js",
-  "browser": "./lib/web.js",
-  "module": "./dist/index.commonjs2.js",
+  "main": "./lib/web.js",
   "scripts": {
     "webpack": "webpack --config ./webpack.config.js --progress --mode",
     "mocha": "mocha --require babel-core/register --exit $1",
